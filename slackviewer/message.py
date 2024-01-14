@@ -73,6 +73,8 @@ class Message(object):
         text = self._message.get("text")
         if text:
             text = self._formatter.render_text(text)
+        else:
+            text = self._formatter.render_text("")
         return text
 
     def user_message(self, user_id):
